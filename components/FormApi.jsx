@@ -57,7 +57,12 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
         removeRedBorder(inputElem)
         let data ;
         const Url =`https:api.shrtco.de/v2/shorten?url=${curlink}`
-        const response = await fetch(Url)
+        const response = await fetch(Url,{
+            headers:{
+            "Content-Type":'application/json',
+            referrePolicy:'no-referrer'
+            }
+        })
         .then(res=>res.json())
         .then(res=>{
             setLinkList(state=>[...state,{link:curlink,shortLink:res.result.short_link}])
