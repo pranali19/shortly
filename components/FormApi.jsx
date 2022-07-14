@@ -63,7 +63,8 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
             "Content-Type":'application/json',
             referrePolicy:'no-referrer'
             },
-            mode:'cors'
+            credentials:"same-origin",
+            mode:'cors',
         })
         .then(res=>res.json())
         .then(res=>{
