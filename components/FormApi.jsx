@@ -14,7 +14,7 @@ const handleCopyClick=(value,setState)=>{
 
 const handleSuccess=(setDispatch,setLink)=>{
     setDispatch(SET_OK);
-    setLink('')
+    setLink(null)
 }
 export const History =({value,state,setState})=>{
 
@@ -51,12 +51,11 @@ const setRedBorder=(inputElem)=>{
 
 
 const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
+    console.log(curlink)
+    const inputElem = document.getElementById('input');
     if(curlink){
     setDispatch(SET_PENDING)
-    const inputElem = document.getElementById('input');
-
         removeRedBorder(inputElem)
-        let data ;
         const Url =`https://api.shrtco.de/v2/shorten?url=${curlink}`
         const response = await fetch(Url,{
             method:"POST",
@@ -72,7 +71,6 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
             }
         })
         .catch(err=>{
-
             console.log(err)
             setDispatch(SET_ERROR)
         });
