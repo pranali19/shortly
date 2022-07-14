@@ -51,6 +51,7 @@ const setRedBorder=(inputElem)=>{
 
 
 const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
+    if(curlink){
     setDispatch(SET_PENDING)
     const inputElem = document.getElementById('input');
 
@@ -61,7 +62,8 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
             headers:{
             "Content-Type":'application/json',
             referrePolicy:'no-referrer'
-            }
+            },
+            mode:'cors'
         })
         .then(res=>res.json())
         .then(res=>{
@@ -75,8 +77,11 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
             setDispatch(SET_ERROR)
         });
         
-        console.log(data);
-
+       
+    }
+    else{
+        setRedBorder(inputElem)
+    }
 }
 
 const FormApi =({curlink, setLink,setLinkList,setDispatch})=>{
