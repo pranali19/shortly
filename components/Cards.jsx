@@ -17,7 +17,7 @@ const Card=()=>{
         <SingleCard >
         <GrowthIcon/>
             <CardTitle>Brand Recognition</CardTitle>
-            <CardPara >Boost your Brand Recognition with each click. Generic link don't mean a thing. Branded links help instil confidence in your content</CardPara>
+            <CardPara >Boost your Brand Recognition with each click. Generic link dont mean a thing. Branded links help instil confidence in your content</CardPara>
         </SingleCard>
     )
 }

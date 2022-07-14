@@ -2,18 +2,11 @@
 
 const nextConfig = {
   reactStrictMode: false,
-  compiler: {
-    styledComponents: true,
+  typescript: {
+    ignoreBuildErrors: true,
   },
-  swcMinify: true,
-  module: {
-    rules: [
-      {
-        test: /\.svg$/,
-        issuer: /\.[jt]sx?$/,
-        use: ["@svgr/webpack"],
-      },
-    ],
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
