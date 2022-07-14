@@ -61,13 +61,17 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
         const response = await fetch(Url)
         .then(res=>res.json())
         .then(res=>{
+            if(res && res.error_code==2){
+                setRedBorder(inputElem)
+                setDispatch(SET_ERROR)
+            }else{
             setLinkList(state=>[...state,{link:curlink,shortLink:res.result.short_link}])
             handleSuccess(setDispatch,setLink)
+            }
         })
         .catch(err=>{
-            if(data && data.error_code==2){
-                setRedBorder(inputElem)
-            }
+
+            console.log(err)
             setDispatch(SET_ERROR)
         });
         
