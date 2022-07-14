@@ -9,7 +9,6 @@ import {SET_OK, SET_PENDING,SET_ERROR} from './reducers'
 
 const handleCopyClick=(value,setState)=>{ 
     setState(value)
-    console.log(value)
     navigator.clipboard.writeText(value.shortLink)
 }
 
@@ -56,20 +55,23 @@ const handleShortenLink = async(curlink,setLinkList,setDispatch,setLink)=>{
     const inputElem = document.getElementById('input');
 
         removeRedBorder(inputElem)
+        let data ;
         const Url =`https:api.shrtco.de/v2/shorten?url=${curlink}`
         const response = await fetch(Url)
-        const data = await response.json()
-        console.log(data);
-        if(data.ok){
-            setLinkList(state=>[...state,{link:curlink,shortLink:data.result.short_link}])
+        .then(res=>res.json())
+        .then(res=>{
+            setLinkList(state=>[...state,{link:curlink,shortLink:res.result.short_link}])
             handleSuccess(setDispatch,setLink)
-        }
-        else{
-            if(data.error_code==2){
+        })
+        .catch(err=>{
+            if(data && data.error_code==2){
                 setRedBorder(inputElem)
             }
             setDispatch(SET_ERROR)
-        }
+        });
+        
+        console.log(data);
+
 }
 
 const FormApi =({curlink, setLink,setLinkList,setDispatch})=>{

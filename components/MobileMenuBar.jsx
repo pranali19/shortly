@@ -15,7 +15,7 @@ const handleBarClick=()=>{
 const MobileMenuBar =()=>{
     return(
         <BarContainer onClick={handleBarClick}>
-        <Image src='/menu.png' width={30} height={30} />
+        <Image src='/menu.png' width={30} height={30} alt='menubar' />
         </BarContainer>
     )
 }
