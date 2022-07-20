@@ -1,20 +1,19 @@
-import {DisplayContainer,DisplayContainerLg} from '../components/styledComponent/Containers'
-import { H1Title } from './styledComponent/Fonts'
 
-import {PictureContainer} from './styledComponent/Inputs'
-const ContainerWithPicture=()=>{
+import {H1Title ,PictureContainer} from '../styledComponent/ContainerWithPicture.styled'
+import {DisplayContainer} from '../styledComponent/Reusables.styled'
+const ContainerBeforePicture=()=>{
 
     return(
-        <DisplayContainer height={"fit-content"} set={'self-end'}>
+        <DisplayContainer height={"90vh"} alignItems={'self-end'}>
         
-            <DisplayContainerLg>
+            <DisplayContainer height='80%' width='95%' background='#fbf9ff70' mt='3%'>
                 <H1Title>MORE THAN JUST SHORTER LINKS</H1Title>
-            </DisplayContainerLg>
+                <PictureContainer src="/working people.png" />
+            </DisplayContainer>
 
-            <PictureContainer src="/working people.png" />
 
         </DisplayContainer>
     )
 }
 
-export default ContainerWithPicture
+export default ContainerBeforePicture

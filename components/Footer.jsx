@@ -1,9 +1,11 @@
 import { InnerFooter,
-    FooterSocialMediaLinks } from "./styledComponent/Containers"
+    FooterSocialMediaLinks } from "../styledComponent/Footer.styled"
+   
 import SocialIcons from '../components/SocialIcons';
 import FooterMenu from "./FooterMenu";
 import SiteLogo from './Sitelogo' 
 const Footer =()=>{
+    
     return(
         <InnerFooter>
             <FooterSocialMediaLinks>

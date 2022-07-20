@@ -1,11 +1,11 @@
-import {DisplayContainerApiCard, FormContainer,StaticsContainer} from '../components/styledComponent/Containers'
-import FormApi, { History } from './FormApi'
-import Statics from '../components/Statics';
+import {DisplayContainerApiCard, FormContainer} from '../styledComponent/ApiCard.styled'
+import FormApi from './FormApi'
+import Statics from './Statics';
 import Cards from './Cards';
 import { useReducer, useState } from "react"
 import StatusMsg from './StatusMsg';
 import reducer from './reducers';
-
+import AllLinks from './AllLinks'
 const ApiAndCard=()=>{
     const [currentCopy,setCurrentCopy] = useState('')
     const [linkList,setLinkList] = useState([])
@@ -21,7 +21,7 @@ const ApiAndCard=()=>{
                 {status.loading || status.error ?<StatusMsg status={status} />:''}
                 <div>
                     { 
-                        linkList.map(i=><History value={i} state={currentCopy} setState={setCurrentCopy} />)
+                        linkList.map((i,indx)=><AllLinks key={'shortLink'+String(indx)} value={i} state={currentCopy} setState={setCurrentCopy} />)
                     }
                 </div>
             </FormContainer>

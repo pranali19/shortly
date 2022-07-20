@@ -1,13 +1,12 @@
-import { FooterMenuLinksContainer,FooterMenuCategory } from "./styledComponent/Containers"
-import {FooterLink, FooterMenuTitle} from './styledComponent/Fonts'
-import {CustomLink} from '../components/styledComponent/Inputs'
 
+import {CustomLink, FooterLink,FooterMenuLinksContainer,FooterMenuCategory} from '../styledComponent/Footer.styled'
+ import { Navlink  } from '../styledComponent/Reusables.styled'
 
 
 const MenuSections=({linkData})=>{
     return(
     <FooterMenuCategory>
-       <FooterMenuTitle>{linkData.title}</FooterMenuTitle> 
+       <Navlink color={'white'} margin={'2% auto'} >{linkData.title}</Navlink> 
        {
         linkData.links.map(link=>
             <FooterLink key={linkData.title+link.name}>

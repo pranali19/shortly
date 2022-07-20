@@ -1,4 +1,4 @@
-import {IconContainer, MediaIconContainer} from '../components/styledComponent/Containers'
+import {IconContainer, MediaIconContainer} from '../styledComponent/SocialIcons.styled'
 import TwitterIcon from '../assets/icons/icon-twitter.svg'
 import PintrestIcon from '../assets/icons/icon-pinterest.svg' ;
 import FbIcon from '../assets/icons/icon-facebook.svg' 

@@ -1,6 +1,5 @@
 
-import {ShortLinkContainer} from "./styledComponent/Containers"
-import {StatusFont} from './styledComponent/Fonts'
+import {StatusFont,ShortLinkContainer} from '../styledComponent/ApiCard.styled'
 const StatusMsg=({status})=>{
     const color = status.error?'red':status.loading?'gray':'black'
     const message = status.error? 'Oops! something went wrong. Please check your url and try again'

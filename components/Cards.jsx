@@ -1,6 +1,10 @@
 
-import {CardsContainer, GrowthIconContainer, LineMark, SingleCard} from './styledComponent/Containers'
-import { CardTitle, CardPara } from './styledComponent/Fonts'
+// import {CardsContainer, GrowthIconContainer, LineMark, SingleCard} from './styledComponent/Containers'
+// import { CardTitle, CardPara } from './styledComponent/Fonts'
+
+import {CardsContainer, GrowthIconContainer, LineMark, SingleCard ,CardTitle, CardPara } from '../styledComponent/Cards.styled'
+
+
 import ProgressUpIcon from '../assets/icons/icon-brand-recognition.svg' 
 
 const GrowthIcon=()=>{

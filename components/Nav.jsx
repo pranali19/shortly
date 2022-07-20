@@ -1,12 +1,13 @@
-import { Navlink } from "./styledComponent/Fonts";
-import { MenuItems,InnerNav,SiteLogo_MenuBarContainer } from "./styledComponent/Containers";
+import { MenuItems,InnerNav,SiteLogo_MenuBarContainer } from "../styledComponent/Nav.styled";
+import {Navlink} from '../styledComponent/Reusables.styled'
+
 import SiteLogo from './Sitelogo' 
 import Link from 'next/link'
 import MobileMenuBar from './MobileMenuBar'
 
 const MenuLinkItem=({href,label})=>{
     return(
-        <Navlink>
+        <Navlink color={'#707070'} margin={'2% auto 2% 0.5%'}>
             <Link href={href} >
                 {label}
             </Link>
