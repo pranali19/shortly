@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {color ,typography} from 'styled-system'
+import {color ,gridTemplateColumns,typography} from 'styled-system'
 
 
 export const InputContainer = styled.div`
@@ -87,8 +87,11 @@ export const ShortLinkContainer =styled.div`
    margin-top:1%;
    display:grid;
    box-shadow:0 2px 2px 0 rgb(0 0 0 / 16%);
-   grid-template-columns:60% 40%;
+   ${gridTemplateColumns}
    border-radius:8px;
+   @media(max-width:1100px){
+      grid-template-columns:50% auto;
+   }
    @media(max-width:1000px){
       grid-template-columns:1fr;
 }

@@ -1,6 +1,6 @@
 // import MenuBar from '../assets/icons/menu.png'
 import Image from 'next/image'
-import {BarContainer} from './styledComponent/Containers'
+import {BarContainer} from '../styledComponent/Containers'
 
 const handleBarClick=()=>{
     const menuDisplay = document.getElementById('menuItem').style;

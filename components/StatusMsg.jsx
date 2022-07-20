@@ -6,7 +6,7 @@ const StatusMsg=({status})=>{
                     :status.loading? 'please wait while we fetch your shorten link'
                     :''
     return(
-        <ShortLinkContainer layout={'1fr'}>
+        <ShortLinkContainer gridTemplateColumns={'1fr'}>
             <StatusFont color={color}>{message}</StatusFont>
         </ShortLinkContainer>
     )

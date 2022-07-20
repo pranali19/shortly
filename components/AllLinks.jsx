@@ -13,7 +13,7 @@ const AllLinks =({value,state,setState})=>{
     const getBgValue= () =>{return value === state?'#2d2f32':'#33b5e5'}
 
     return( 
-        <ShortLinkContainer >
+        <ShortLinkContainer gridTemplateColumns={"55% auto"} >
           
             <InputLinkContainer>
                 <InputLink textAlign={'right'} color={'black'} >{value.link}</InputLink>    
